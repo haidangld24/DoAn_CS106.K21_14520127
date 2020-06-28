@@ -69,7 +69,7 @@ for step, (batch_x, batch_y) in enumerate(train_data.take(training_steps), 1):
 pred = neural_net(x_test)
 print("Test Accuracy: %f" % accuracy(pred, y_test))
 
-n_images = 200
+n_images = 9
 test_images = x_test[:n_images]
 test_labels = y_test[:n_images]
 predictions = neural_net(test_images)
