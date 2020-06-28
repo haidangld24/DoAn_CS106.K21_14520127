@@ -60,11 +60,11 @@ def accuracy(y_pred, y_true):
 
 for step, (batch_x, batch_y) in enumerate(train_data.take(training_steps), 1):
     run_optimization(batch_x, batch_y)
-    '''if step % display_step == 0:
+    if step % display_step == 0:
         pred = neural_net(batch_x)
         loss = cross_entropy(pred, batch_y)
         acc = accuracy(pred, batch_y)
-        print("Training epoch: %i, Loss: %f, Accuracy: %f" % (step, loss, acc))'''
+        print("Training epoch: %i, Loss: %f, Accuracy: %f" % (step, loss, acc))
 
 pred = neural_net(x_test)
 print("Test Accuracy: %f" % accuracy(pred, y_test))
